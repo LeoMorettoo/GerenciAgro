@@ -23,10 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: GerenciAgro_development
   host: localhost
   username: tcc3
   password: 123456
+  database: GerenciAgro_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
