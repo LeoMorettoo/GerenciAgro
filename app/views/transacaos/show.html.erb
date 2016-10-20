@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="panel-body">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group form-inline">
+        <label>Cliente:</label>
+        <p class="form-control-static">
+          <%= @transacao.cliente.nome %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Fornecedor:</label>
+        <p class="form-control-static">
+          <%= @transacao.fornecedor.nome %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Centro custo:</label>
+        <p class="form-control-static">
+          <%= @transacao.centro_custo.descricao %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Valor:</label>
+        <p class="form-control-static">
+          <%= @transacao.valor %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'Edit', edit_transacao_path(@transacao), class: "btn btn-default" %> |
+<%= link_to 'Back', transacaos_path , class: "btn btn-default"%>

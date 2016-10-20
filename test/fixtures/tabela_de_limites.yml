@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  limite_inferior: 1.5
+  limite_superior: 1.5
+  aliquota: 1.5
+  impostos: one
+
+two:
+  limite_inferior: 1.5
+  limite_superior: 1.5
+  aliquota: 1.5
+  impostos: two

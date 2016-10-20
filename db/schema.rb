@@ -10,9 +10,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161011030843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "centro_custos", force: :cascade do |t|
+    t.text     "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "clientes", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "cpf"
+    t.string   "cnpj"
+    t.string   "tipo_conta"
+    t.string   "conta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fornecedors", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "cpf"
+    t.string   "cnpj"
+    t.string   "tipo_conta"
+    t.string   "conta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "impostos", force: :cascade do |t|
+    t.text     "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tabela_de_limites", force: :cascade do |t|
+    t.float    "limite_inferior"
+    t.float    "limite_superior"
+    t.float    "aliquota"
+    t.integer  "impostos_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["impostos_id"], name: "index_tabela_de_limites_on_impostos_id", using: :btree
+  end
+
+  create_table "transacaos", force: :cascade do |t|
+    t.integer  "cliente_id"
+    t.integer  "fornecedor_id"
+    t.integer  "centro_custo_id"
+    t.float    "valor"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["centro_custo_id"], name: "index_transacaos_on_centro_custo_id", using: :btree
+    t.index ["cliente_id"], name: "index_transacaos_on_cliente_id", using: :btree
+    t.index ["fornecedor_id"], name: "index_transacaos_on_fornecedor_id", using: :btree
+  end
+
+  add_foreign_key "tabela_de_limites", "impostos", column: "impostos_id"
+  add_foreign_key "transacaos", "clientes"
+  add_foreign_key "transacaos", "fornecedors"
 end

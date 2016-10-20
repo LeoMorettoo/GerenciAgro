@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente: one
+  fornecedor: one
+  centro_custo: 
+  valor: 1.5
+
+two:
+  cliente: two
+  fornecedor: two
+  centro_custo: 
+  valor: 1.5

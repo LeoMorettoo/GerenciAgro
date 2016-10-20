@@ -1,4 +1,112 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+                <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <div class="row">
+                          <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                          </div>
+                          <div class="col-xs-9 text-right">
+                            <div class="huge"><%=@clientes_total%></div>
+                            <div>Clientes</div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="<%=clientes_path%>">
+                        <div class="panel-footer">
+                          <span class="pull-left">Ver detalhes</span>
+                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                          <div class="clearfix"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <div class="row">
+                          <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                          </div>
+                          <div class="col-xs-9 text-right">
+                            <div class="huge"><%=@fornecedores_total%></div>
+                            <div>Fornecedores!</div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="<%=fornecedors_path%>">
+                        <div class="panel-footer">
+                          <span class="pull-left">Ver detalhes</span>
+                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                          <div class="clearfix"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <div class="row">
+                          <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                          </div>
+                          <div class="col-xs-9 text-right">
+                            <div class="huge"><%=@impostos%></div>
+                            <div>Impostos!</div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="<%=impostos_path%>">
+                        <div class="panel-footer">
+                          <span class="pull-left">Ver detalhes</span>
+                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                          <div class="clearfix"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <div class="row">
+                          <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                          </div>
+                          <div class="col-xs-9 text-right">
+                            <div class="huge"><%=@trasacoes_total%></div>
+                            <div>Transacões!</div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="<%=transacaos_path%>">
+                        <div class="panel-footer">
+                          <span class="pull-left">Ver detalhes</span>
+                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                          <div class="clearfix"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <div class="row">
+                          <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                          </div>
+                          <div class="col-xs-9 text-right">
+                          <div class="huge"><%=@custos_total%></div>
+                            <div>Centro de custos!</div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="<%=centro_custos_path%>">
+                        <div class="panel-footer">
+                          <span class="pull-left">Ver detalhes</span>
+                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                          <div class="clearfix"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>

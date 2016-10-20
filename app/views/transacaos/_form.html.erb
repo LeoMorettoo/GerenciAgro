@@ -1,0 +1,47 @@
+<%= form_for(transacao) do |f| %>
+  <% if transacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transacao.errors.count, "error") %> prohibited this transacao from being saved:</h2>
+
+      <ul>
+      <% transacao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="panel-body">
+   <div class="row">
+       <div class="col-lg-6">
+          <div class="form-group">
+            <div class="field">
+              <%= f.label :cliente_id %>
+              <%= f.text_field :cliente_id ,class: "form-control", placeholder: "Entre com Nome do cliente"%>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="field">
+              <%= f.label :fornecedor_id %>
+              <%= f.text_field :fornecedor_id ,class: "form-control", placeholder: "Entre com Nome do fornecedor"%>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="field">
+              <%= f.label :centro_custo %>
+              <%= f.text_field :centro_custo_id ,class: "form-control", placeholder: "Entre com Nome do centro de custo"%>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="field">
+              <%= f.label :valor %>
+              <%= f.text_field :valor ,class: "form-control", placeholder: "Entre com Nome do valor"%>
+            </div>
+          </div>
+            <div class="form-group input-group">
+              <%= f.submit class: "btn btn-default"%>
+            </div>
+<% end %>
+        </div>
+    </div>
+</div>
+

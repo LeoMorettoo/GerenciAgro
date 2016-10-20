@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>GerenciAgro</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>GerenciAgro  <%= @title ? ' - '+@title : "" %></title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<%= render 'shared/top' %>
+<%= render 'shared/sideBar' %>
+  <div id="wrapper">
+    <div id="page-wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header"><%=(@module_name) ? @module_name : ''%></h1>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /.col-lg-12 -->
+      <%= yield %>
+    </div>
+  </div>
+</body>
 </html>

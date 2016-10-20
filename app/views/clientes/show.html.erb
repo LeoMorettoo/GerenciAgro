@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel-body">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group form-inline">
+        <label>Nome:</label>
+        <p class="form-control-static">
+          <%= @cliente.nome %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Endereco:</label>
+        <p class="form-control-static">
+          <%= @cliente.endereco %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Cpf:</label>
+        <p class="form-control-static">
+          <%= @cliente.cpf %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Cnpj:</label>
+        <p class="form-control-static">
+          <%= @cliente.cnpj %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Tipo conta:</label>
+        <p class="form-control-static">
+          <%= @cliente.tipo_conta %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Conta:</label>
+        <p class="form-control-static">
+          <%= @cliente.conta %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_cliente_path(@cliente) , class: "btn btn-default"%> |
+<%= link_to 'Back', clientes_path , class: "btn btn-default"%>

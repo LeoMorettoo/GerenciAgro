@@ -1,0 +1,1 @@
+json.partial! "centro_custos/centro_custo", centro_custo: @centro_custo

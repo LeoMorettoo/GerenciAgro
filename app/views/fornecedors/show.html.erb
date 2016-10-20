@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel-body">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group form-inline">
+        <label>Nome:</label>
+        <p class="form-control-static">
+          <%= @fornecedor.nome %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Endereco:</label>
+        <p class="form-control-static">
+          <%= @fornecedor.endereco %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Cpf:</label>
+        <p class="form-control-static">
+          <%= @fornecedor.cpf %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Cnpj:</label>
+        <p class="form-control-static">
+          <%= @fornecedor.cnpj %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Tipo conta:</label>
+        <p class="form-control-static">
+          <%= @fornecedor.tipo_conta %>
+        </p>
+      </div>
+
+      <div class="form-group form-inline">
+        <label>Conta:</label>
+        <p class="form-control-static">
+          <%= @fornecedor.conta %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= link_to 'Edit', edit_fornecedor_path(@fornecedor), class: "btn btn-default" %> |
+<%= link_to 'Back', fornecedors_path , class: "btn btn-default"%>

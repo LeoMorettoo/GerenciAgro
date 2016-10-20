@@ -1,0 +1,28 @@
+<%= form_for(centro_custo) do |f| %>
+  <% if centro_custo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(centro_custo.errors.count, "error") %> prohibited this centro_custo from being saved:</h2>
+
+      <ul>
+      <% centro_custo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="panel-body">
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <div class="field">
+              <%= f.label :descricao %>
+              <%= f.text_area :descricao,class: "form-control", placeholder: "Entre com a descrição do custo" %>
+            </div>
+          </div>
+          <div class="form-group input-group">
+            <%= f.submit class: "btn btn-default" %>
+          </div>
+        <% end %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<div class="panel-body">
+  <div class="row">
+    <div class="col-lg-6">
+
+    <div class="form-group form-inline">
+      <label>Nome:</label>
+      <p class="form-control-static">
+        <%= @imposto.descricao %>
+      </p>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_imposto_path(@imposto), class: "btn btn-default" %> |
+<%= link_to 'Back', impostos_path , class: "btn btn-default"%>
