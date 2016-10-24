@@ -15,20 +15,29 @@
        <div class="col-lg-6">
           <div class="form-group">
             <div class="field">
-              <%= f.label :cliente_id %>
-              <%= f.text_field :cliente_id ,class: "form-control", placeholder: "Entre com Nome do cliente"%>
+              <label >Tipo da transação</label>
+              <%= label_tag(:cliente, "Cliente" ,class: 'radio-inline') %>
+              <%= radio_button_tag(:tipo_transacao, "1",'checked') %>
+              <%= label_tag(:forncedor, "Fornecedor" ,class: 'radio-inline') %>
+              <%= radio_button_tag(:tipo_transacao, "2") %>
             </div>
           </div>
-          <div class="form-group">
+          <div id="cliente" class="form-group">
+            <div class="field">
+              <%= f.label :cliente_id %>
+              <%= f.collection_select :cliente_id, Cliente.order(:nome) ,:id, :nome, {prompt: "Selecione um cliente"},{ class: 'form-control'}%>
+            </div>
+          </div>
+          <div id="fornecedor" class="form-group" style="display: none;">
             <div class="field">
               <%= f.label :fornecedor_id %>
-              <%= f.text_field :fornecedor_id ,class: "form-control", placeholder: "Entre com Nome do fornecedor"%>
+              <%= f.collection_select :fornecedor_id, Fornecedor.order(:nome) ,:id, :nome, {prompt: "Selecione um fornecedor"},{ class: 'form-control'}%>
             </div>
           </div>
           <div class="form-group">
             <div class="field">
-              <%= f.label :centro_custo %>
-              <%= f.text_field :centro_custo_id ,class: "form-control", placeholder: "Entre com Nome do centro de custo"%>
+              <%= f.label :centro_custo, 'Custo' %>
+              <%= f.collection_select :centro_custo_id, CentroCusto.order(:descricao) ,:id, :descricao, {prompt: "Selecione um custo"},{ class: 'form-control'}%>
             </div>
           </div>
           <div class="form-group">
