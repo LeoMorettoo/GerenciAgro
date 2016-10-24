@@ -18,8 +18,8 @@
     <% @transacaos.each do |transacao| %>
       <tr>
         <td><%= transacao.id %></td>
-        <td><%= transacao.cliente.nome %></td>
-        <td><%= transacao.fornecedor.nome %></td>
+        <td><%= transacao.cliente.nil? ? "Sem  Cliente" : transacao.cliente.nome %></td>
+        <td><%= transacao.fornecedor.nil? ? "Sem Forncedor": transacao.fornecedor.nome %></td>
         <td><%= transacao.centro_custo.descricao %></td>
         <td><%= transacao.valor %></td>
         <td><%= link_to 'Show', transacao %></td>
