@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery ->
+$(document).on 'turbolinks:load', ->
   $radio = $("input[type=radio][name=tipo_transacao]")
   $radio_cliente = $("input[type=radio][name=tipo_transacao][value=1]")
   $radio_fornecedor = $("input[type=radio][name=tipo_transacao][value=2]")
