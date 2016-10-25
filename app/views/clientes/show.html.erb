@@ -32,7 +32,7 @@
       </div>
 
       <div class="form-group form-inline">
-        <label>Tipo conta:</label>
+        <label>Tipo da conta:</label>
         <p class="form-control-static">
           <%= @cliente.tipo_conta %>
         </p>
@@ -48,5 +48,5 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_cliente_path(@cliente) , class: "btn btn-default"%> |
-<%= link_to 'Back', clientes_path , class: "btn btn-default"%>
+<%= link_to 'Editar', edit_cliente_path(@cliente) , class: "btn btn-default"%> |
+<%= link_to 'Voltar', clientes_path , class: "btn btn-default"%>

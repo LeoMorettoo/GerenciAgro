@@ -2,22 +2,33 @@
 <div class="panel-body">
   <div class="row">
     <div class="col-lg-6">
+
+    <%
+      if !@transacao.cliente.nil?
+    %>
       <div class="form-group form-inline">
         <label>Cliente:</label>
         <p class="form-control-static">
           <%= @transacao.cliente.nome %>
         </p>
       </div>
+    <%
+      end
 
+      if !@transacao.fornecedor.nil?
+    %>
       <div class="form-group form-inline">
         <label>Fornecedor:</label>
         <p class="form-control-static">
           <%= @transacao.fornecedor.nome %>
         </p>
       </div>
+    <%
+      end
+    %>
 
       <div class="form-group form-inline">
-        <label>Centro custo:</label>
+        <label>Custo:</label>
         <p class="form-control-static">
           <%= @transacao.centro_custo.descricao %>
         </p>
@@ -32,5 +43,5 @@
     </div>
   </div>
 </div>
-<%= link_to 'Edit', edit_transacao_path(@transacao), class: "btn btn-default" %> |
-<%= link_to 'Back', transacaos_path , class: "btn btn-default"%>
+<%= link_to 'Editar', edit_transacao_path(@transacao), class: "btn btn-default" %> |
+<%= link_to 'Voltar', transacaos_path , class: "btn btn-default"%>
