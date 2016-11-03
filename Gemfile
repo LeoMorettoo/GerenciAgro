@@ -18,7 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'bootstrap_sb_admin_base_v2'
-#bootstrap do demonio
+# bootstrap do demonio
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
