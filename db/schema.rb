@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011030843) do
+ActiveRecord::Schema.define(version: 20161101145457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,16 +47,17 @@ ActiveRecord::Schema.define(version: 20161011030843) do
     t.text     "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "titulo"
   end
 
   create_table "tabela_de_limites", force: :cascade do |t|
     t.float    "limite_inferior"
     t.float    "limite_superior"
     t.float    "aliquota"
-    t.integer  "impostos_id"
+    t.integer  "imposto_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["impostos_id"], name: "index_tabela_de_limites_on_impostos_id", using: :btree
+    t.index ["imposto_id"], name: "index_tabela_de_limites_on_imposto_id", using: :btree
   end
 
   create_table "transacaos", force: :cascade do |t|
@@ -71,7 +72,7 @@ ActiveRecord::Schema.define(version: 20161011030843) do
     t.index ["fornecedor_id"], name: "index_transacaos_on_fornecedor_id", using: :btree
   end
 
-  add_foreign_key "tabela_de_limites", "impostos", column: "impostos_id"
+  add_foreign_key "tabela_de_limites", "impostos"
   add_foreign_key "transacaos", "clientes"
   add_foreign_key "transacaos", "fornecedors"
 end

@@ -4,10 +4,10 @@ one:
   limite_inferior: 1.5
   limite_superior: 1.5
   aliquota: 1.5
-  impostos: one
+  imposto: one
 
 two:
   limite_inferior: 1.5
   limite_superior: 1.5
   aliquota: 1.5
-  impostos: two
+  imposto: two
