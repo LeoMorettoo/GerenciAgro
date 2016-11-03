@@ -28,7 +28,7 @@ class CentroCustosController < ApplicationController
 
     respond_to do |format|
       if @centro_custo.save
-        format.html { redirect_to @centro_custo, notice: 'Centro custo was successfully created.' }
+        format.html { redirect_to @centro_custo, notice: 'Centro custo criado com sucesso.' }
         format.json { render :show, status: :created, location: @centro_custo }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CentroCustosController < ApplicationController
   def update
     respond_to do |format|
       if @centro_custo.update(centro_custo_params)
-        format.html { redirect_to @centro_custo, notice: 'Centro custo was successfully updated.' }
+        format.html { redirect_to @centro_custo, notice: 'Centro custo atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @centro_custo }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CentroCustosController < ApplicationController
   def destroy
     @centro_custo.destroy
     respond_to do |format|
-      format.html { redirect_to centro_custos_url, notice: 'Centro custo was successfully destroyed.' }
+      format.html { redirect_to centro_custos_url, notice: 'Centro custo deletado com sucesso.' }
       format.json { head :no_content }
     end
   end
