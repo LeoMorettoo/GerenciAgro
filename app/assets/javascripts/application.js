@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require datatables/js/jquery.dataTables.min.js
+//= require datatables-plugins/dataTables.bootstrap.min.js
+//= require datatables-responsive/dataTables.responsive.js
 //= require bootstrap
 //= require bootstrap_sb_admin_base_v2
 //= require jquery_ujs
